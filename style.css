@@ -127,7 +127,6 @@ main{
 @media only screen and (min-width: 1440px) {
     main{
         width: 1200px;
-        /* margin-top: 80px; */
     }
     section{
         height: 80vh;
@@ -147,17 +146,18 @@ main{
     .container-header-h1{
         text-align: left;
         padding: 20px 30px;
-        max-width: 300px;
+        max-width: 400px;
+        font-size: 50px;
     }
     .container-header-p{
         text-align: left;
-        /* padding: 0px 50px 30px 30px; */
         max-width: 470px;
     }
 
 /* Segunda sección */
     .container-stars{
         grid-area: b;
+        align-self: center;
 
     }
 
@@ -166,8 +166,8 @@ main{
         background-color: var(--LightGrayishMagenta);
         color: var(--VeryDarkMagenta);
         border-radius: 5px;
-        /* justify-content: space-around; */
         align-items: center;
+        
         font-weight: 700;
         padding: 15px 15px;
         width: 80%;
@@ -208,8 +208,4 @@ main{
         align-self: flex-end;
     }
 
-/* Footer */
-/* footer{
-    padding-top: 50px;
-} */
 }
