@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Outfit:wght@400;700&display=swap');
+
+:root{
+--VeryDarkMagenta: hsl(300, 43%, 22%);
+--SoftPink: hsl(333, 80%, 67%);
+--DarkGrayishMagenta: hsl(303, 10%, 53%);
+--LightGrayishMagenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--White);
+    font-family: 'League Spartan', sans-serif;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main{
+    width: 375px;
+    margin-top: 80px;
+}
+
+/* Primera sección */
+.container-header-h1{
+    text-align: center;
+    color: var(--VeryDarkMagenta);
+    padding: 20px 50px;
+    font-weight: 700;
+    font-size: 35px;
+}
+.container-header-p{
+    text-align: center;
+    color: var(--DarkGrayishMagenta);
+    padding: 5px 30px 5px 30px;
+    font-weight: 500;
+    line-height: 25px;
+    font-size: 17px;
+}
+
+/* Segunda sección */
+.container-stars{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+
+
+}
+.container-star{
+    background-color: var(--LightGrayishMagenta);
+    color: var(--VeryDarkMagenta);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.container-star-five{
+    padding-bottom: 12px;
+}
+
+/* Tercera sección */
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+
+}
+.container-card{
+    background-color: var(--VeryDarkMagenta);
+    color: var(--LightGrayishMagenta);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 10px 40px 20px 40px;
+}
+.container-card-image{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 80%;
+    padding: 20px 0;
+    width: 80%;
+}
+.container-card-perfil{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-items: center;
+    align-items: center;
+    justify-self: start;
+    align-self: center;
+    padding: 20px 10px;
+}
+.container-card-description{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    line-height: 25px;
+    font-weight: 400;
+    font-size: 17;
+    padding: 10px 0;
+}
+.container-card-perfil-name{
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+.container-card-perfil-career{
+    color: var(--SoftPink);
+}
+/* Footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/*-----------------------------------(>1440px)---------------------------------*/
+@media only screen and (min-width: 1440px) {
+    main{
+        width: 1200px;
+        /* margin-top: 80px; */
+    }
+    section{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "a b"
+                             "c c";
+ 
+    }
+/* Primera sección */
+    .container-header{
+        grid-area: a;
+
+
+    }
+    .container-header-h1{
+        text-align: left;
+        padding: 20px 30px;
+        max-width: 300px;
+    }
+    .container-header-p{
+        text-align: left;
+        /* padding: 0px 50px 30px 30px; */
+        max-width: 470px;
+    }
+
+/* Segunda sección */
+    .container-stars{
+        grid-area: b;
+
+    }
+
+    .container-star{
+        display: flex;
+        background-color: var(--LightGrayishMagenta);
+        color: var(--VeryDarkMagenta);
+        border-radius: 5px;
+        /* justify-content: space-around; */
+        align-items: center;
+        font-weight: 700;
+        padding: 15px 15px;
+        width: 80%;
+    }
+    .container-star-five{
+        padding-bottom: 0px;
+        padding-right: 15px;
+    }
+    .reviews{
+        align-self: start;
+        justify-content: center;
+        
+    }
+    .guru{
+        align-self: center;
+        justify-content: center;
+    }
+    .besttech{
+        align-self: end;
+        justify-content: center;
+    }
+/* Tercera sección */
+    .container-cards{
+        grid-area: c;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 30px;
+        gap: 30px;
+        
+    }
+    .card-up{
+        align-self: flex-start;
+    }
+    .card-center{
+        align-self: center;
+    }
+    .card-bottom{
+        align-self: flex-end;
+    }
+
+/* Footer */
+/* footer{
+    padding-top: 50px;
+} */
+}
